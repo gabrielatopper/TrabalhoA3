@@ -22,6 +22,8 @@
 	<form  method = "POST" action = " salvarLivros.php?<?php echo $action; ?>">
 		<label  for="txtNome"> Nome do Livro: </label>
         <input  type="text" name="txtNome" required /> <br><br>
+		<label  for="txtNomeAutor"> Nome do Autor: </label>
+        <input  type="text" name="txtNomeAutor" required /> <br><br>
 		<label  for="txtQtd"> Quantidade do exemplar: </label>
         <input  type="number" name="txtQtd" required />
 		
@@ -36,6 +38,7 @@
 		<tr>
 			<th>Código</th>
 			<th>Nome</th>
+			<th>Nome do Autor</th>
 			<th>Quantidade</th>
 			
 		</tr>
@@ -49,6 +52,7 @@
 				echo '<tr>';
 				echo '	<td>'.$cat['id'].'</td>';
 				echo '	<td>'.$cat['nome'].'</td>';
+				echo '	<td>'.$cat['autor'].'</td>';
 				echo '	<td>'.$cat['quantidade'].'</td>';
 				echo '</tr>';
 			}
